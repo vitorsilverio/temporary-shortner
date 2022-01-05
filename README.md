@@ -1,5 +1,5 @@
 # temporary-shortner
-A webapp that shortner URLs but for limited time
+A webapp that shortens URLs but for a limited time
 
 ## Demo site
 [https://temporary-shortner.herokuapp.com/](https://temporary-shortner.herokuapp.com/)
