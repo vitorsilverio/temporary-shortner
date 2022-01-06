@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  app:
+    build: . # From source
+    # image: vitorsilverio/temporary-shortner:main # From Docker Hub
+    ports:
+      - "8080:80"
+    environment:
+      REDIS_URL: "redis://redisserver:6379" 
+      APP_BASE_URL: "http://localhost:8080" # Change here to reflect your domain
+      # EXPIRATION_TIME: "604800" # Default is 7 days
+    links:
+      - "redisserver"
+  redisserver:
+    image: redis:alpine
+
+

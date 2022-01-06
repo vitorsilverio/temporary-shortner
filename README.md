@@ -10,6 +10,11 @@ A webapp that shortens URLs but for a limited time
 docker build -t tshort .
 docker run -d --name tshort -p{PORT}:80 -e REDIS_URL="{REDIS_URL" -e APP_BASE_URL="{BASE_URL}" tshort
 ```
+### Using docker-compose
+1. Rename `docker-compose.yml.example` to `docker-compose.yml`
+2. Modify `docker-compose.yml` to reflect your configuration
+3. Run `docker-compose up -d`
+
 ### Locally with uvicorn
 1. Create a python virtualenv (At least python 3.9)
 2. Install dependencies with `pip install -r requirements.txt`

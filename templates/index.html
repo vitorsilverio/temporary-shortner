@@ -20,13 +20,14 @@
 
         {% if url %}
         <div class="result">
-            <p>Shortened URL: <a target="_blank" href="{{ url }}">{{ url }}</a></p>
+            <p>Shortened URL: <a target="_blank" href="{{ url }}">{{ url }}</a>. <br />This link will be valid for {{expiration_time}}</p>
         </div>
         {% endif %}
     </div>
     <footer>
         <p>Temporary Shortner&copy; 2022</p>
         <p><a href="https://www.buymeacoffee.com/vitorsilverio">Buy me a ☕</a></p>
+        <p><a target="_blank" href="https://github.com/vitorsilverio/temporary-shortner"><image src="{{url_for('static', path='/GitHub-Mark-32px.png')}}" /><a></p>
     </footer>
     
 </body>
