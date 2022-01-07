@@ -25,8 +25,8 @@ async def home(request: Request):
 async def shorten(request: Request, url: str = Form(...)):
     if not validators.url(url):
         return templates.TemplateResponse("index.html", {"request": request, "error": "Invalid URL"}, status_code=400)
-    url = shortner.shorten(url)
-    return templates.TemplateResponse("index.html", {"request": request, "url": url, "expiration_time": expiration_time})
+    shortened_url = shortner.shorten(url)
+    return templates.TemplateResponse("index.html", {"request": request, "url": shortened_url, "expiration_time": expiration_time})
 
 @app.get("/{short_url}", response_class=Union[RedirectResponse,HTMLResponse])
 async def redirect(request: Request, short_url: str):
