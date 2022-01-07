@@ -33,5 +33,5 @@ async def redirect(request: Request, short_url: str):
     try:
         url = shortner.get_url(short_url)
         return RedirectResponse(url)
-    except ValueError as e:
-        return templates.TemplateResponse("index.html", {"request": request, "error": str(e)}, status_code=404)
+    except ValueError:
+        return templates.TemplateResponse("index.html", {"request": request, "error": "Not found!"}, status_code=404)
