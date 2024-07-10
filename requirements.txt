@@ -27,3 +27,4 @@ validators==0.18.2
 watchgod==0.7
 websockets==10.1
 wrapt==1.13.3
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
