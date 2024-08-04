@@ -1,4 +1,4 @@
-FROM python:3.10-slim as builder
+FROM python:3.13.0rc1-slim as builder
 # This stage installs gcc to compile all python modules that requires it.
 # We don't need gcc in final stage
 
@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip wheel --no-cache-dir --no-deps --wheel-dir /app/wheels -r requirements.txt
 
 
-FROM python:3.10-slim
+FROM python:3.13.0rc1-slim
 # this stage contains the final code
 
 WORKDIR /app
