@@ -14,7 +14,7 @@ packaging==21.3
 pydantic==1.9.0
 pyparsing==3.0.6
 python-dotenv==0.19.2
-python-multipart==0.0.5
+python-multipart==0.0.18
 PyYAML==6.0
 redis==4.1.0
 six==1.16.0
